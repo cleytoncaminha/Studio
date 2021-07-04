@@ -1,0 +1,46 @@
+.form{
+    margin-left: 30%;
+}
+input{
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+    margin-top: 2%;
+    font-size: 150%;
+    border-radius: 10%;
+}
+.enviar{
+    width: 25%;
+    display: block;
+    margin-left: 14%;
+    margin-top: 3%;
+    height: 40px;
+}
+.cadastro{
+    text-align: center;
+    margin-top: 2%;
+    font-size: 200%;
+}
+
+@media screen and (max-width: 650px){
+    .cadastro{
+        font-size: 80%;
+    }
+    .form{
+        margin-left: 5%;
+    }
+    input{
+        width: 90%;
+        text-align: center;
+        padding: 5px;
+        margin-top: 2%;
+        font-size: 150%;
+        border-radius: 10%;
+    }
+    .enviar{
+        width: 25%;
+        display: block;
+        margin-left: 34%;
+    
+    }
+}

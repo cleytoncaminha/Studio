@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pres.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header class="banner">
+        <h1 class="titulo">Studio Silver</h1>
+
+    </header>
+    <nav>
+        <ul class="menu">
+            <li ><a href="index.html">INICIO</a></li>
+            <li><a href="services.html">SERVICIOS</a></li>
+            <li id="here"><a href="#">PRESUPUESTO</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="cadastro"><h1>Regístrate para recibir tu presupuesto</h1></div>
+        <div class="form">
+            <input id="email" type="email" placeholder="email@email.com">
+            <input id="name" type="text" placeholder="nombre">
+            <input id="service" type="text" placeholder="Servicio">
+            <button class="enviar" onclick="newContact()">Enviar</button>
+           </div>
+    </main>             
+
+                <footer><ul class="contact"><li><a href="#"><img src="./Imagenes/insta.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="./Imagenes/face.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="./Imagenes/whatsapp-145-624885.png" alt="Whatsapp"></a></li>
+                <div class="ficticia">
+                <p>esta pagina es ficticia</p>
+            </div></ul>
+            
+            </footer>
+
+
+            <script>
+                function newContact(){
+                    let email = document.getElementById("email").value;
+                    let name = document.getElementById("name").value;
+                    let service = document.getElementById("service").value;
+                
+                    let contact = {email, name, service};
+                    const options = {method:"POST",
+                            headers: new Headers({'content-type': 'application/json'}),
+                            body: JSON.stringify(contact)
+                        }
+                        
+                        fetch("http://localhost:3000/users", options).then(res=>{
+                            console.log(res)
+                            window.alert('registro realizado con éxito, Gracias')
+                        })
+                };</script>
+       
+</html>
+       
+</html>

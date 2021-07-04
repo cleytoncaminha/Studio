@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0%;
+    font-family: 'Merriweather', serif;
+   
+}
+body{
+    background-color: #A66D3C;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner{
+    width: 100%;
+    background-image: url(./Imagenes/recording-studio-1869560_1920.jpg);
+    background-size: cover;
+    color: white;
+    height: 48vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titulo{
+    font-size: 500%;
+    color:white;
+}
+
+.menu{
+display: flex;
+list-style: none;
+background-color: #73573f;
+align-items: center;
+font-weight: 500;
+justify-content: center;
+}
+
+.menu li {
+    height: 100%;
+    font-size: 2vh;
+   padding: 15px;
+   }
+
+.menu li:hover{
+    background-color: #A66D3C ;
+    
+}
+
+.menu li a{
+    text-decoration: none;
+    color: black;
+}
+
+#here{
+    background-color: #A66D3C;
+}
+
+.info{
+    margin-top: 3%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    
+}
+.info img{
+    border-radius: 5%;
+}
+.description{
+    width: 48%;
+    font-size: 160%;
+    margin-left: 2%;
+}
+
+.service{
+    font-size: 180%;
+    color: #0c0D07;
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    }
+
+    .imgservice{
+        display: flex;
+        justify-content: space-around;
+        
+    }
+.imgservice p img{
+    border-radius: 5%;
+    margin-left: 20%;
+    transition-property: padding;
+    transition-duration: 500ms;
+    
+}
+
+.imgservice p img:hover{
+    padding: 10px;
+}
+footer{
+    background-color: #84898c;
+    margin: 0;
+    margin-top: 3%;
+    
+}
+.contact{
+    list-style-type: none;
+    list-style: none;
+    position: relative;
+    
+}
+.contact li img{
+    padding: 5px;
+    text-decoration: none;
+    color: #0c0D07;
+    list-style-type: none;
+    margin-left: 10px;
+    width: 3vh;
+    float: left;
+    overflow: hidden;
+    
+}
+.ficticia{
+    margin-left: 70%;
+    padding: 1%;
+}
+
+@media screen and (max-width: 650px) {
+    .menu{
+        justify-content: left;
+    }
+    .titulo{
+        font-size: 300%;
+    }
+    
+    .info{
+        float: none; 
+        display: block;
+    }
+    .info img{
+        width: 100%;
+        border-radius: 5%;
+    }
+    .description{
+        float: none;
+        font-size: 90%;
+        width: 100%;
+    }
+    .imgservice{
+        display: block;
+        margin-bottom: 3%;
+        
+    }
+    .imgservice p img{
+        border-radius: 5%;
+        transition-property: padding;
+        transition-duration: 500ms;
+        width: 90%;
+        margin-left: 5%;
+        transition: 500ms;
+    }
+
+    .imgservice p img:hover{
+        padding: 10px;
+    }
+}
+
+
+    

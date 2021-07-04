@@ -1,0 +1,44 @@
+.Serv{
+    display: flex;
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.Serv img{
+    width: 50%;
+     border-radius: 5%;
+}
+
+.buttonpres{
+    text-align: center;
+    margin-top: 5%;
+    display: block;
+    font-size: 300%;
+    background-color: black;
+    border: 5px gray solid;
+    /* margin-left: 30%; */
+    /* margin-right: 30%; */
+    width: 60%;
+    margin: 30px auto;
+    border-radius: 15%;
+    box-sizing: border-box;
+    
+}
+.buttonpres a{
+    text-decoration: none;
+    color: white;
+}
+    
+@media screen and (max-width: 650px) {
+    .Serv{
+        display: block;
+    }
+    .Serv img{
+        width: 100%;
+        border-radius: 5%;
+    }
+    .buttonpres{
+        font-size: 100%;
+    }
+   
+}
