@@ -15,17 +15,25 @@ app.use(express.json())
 
 app.post('/users', (req, res) => {
     const body = req.body;
-  
+  if(body.service == "Music")
     connection.query(`
-      INSERT INTO \`usuarios\` (\`email\`, \`name\`, \`service\`) 
-      VALUES ('${body.email}', '${body.name}', '${body.service}');
+      INSERT INTO \`music\` (\`email\`, \`name\` ) 
+      VALUES ('${body.email}', '${body.name}');
     `, 
       (error, result) => {
         if (error) {
-          console.error(error);
-          return res.json({ message: 'No pudimos crear un usuario'});
-        }
-        return res.json({ message: 'El usuario a sido creado con exito' });
+          console.log(error);
+        };
+      }
+    )
+    if(body.service == "Video")
+    connection.query(`
+      INSERT INTO \`video\` (\`email\`, \`name\` ) 
+      VALUES ('${body.email}', '${body.name}');
+    `, 
+      (error, res) => {
+        if (error) {
+         console.log(error)};
       }
     );
   });

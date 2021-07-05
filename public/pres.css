@@ -21,6 +21,14 @@ input{
     margin-top: 2%;
     font-size: 200%;
 }
+.servicesForm{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 150%;
+    justify-content: center;
+}
 
 @media screen and (max-width: 650px){
     .cadastro{
@@ -38,9 +46,22 @@ input{
         border-radius: 10%;
     }
     .enviar{
-        width: 25%;
+        width: 40%;
         display: block;
-        margin-left: 34%;
+        margin:auto;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        margin-top: 5%;
     
+    }
+    .servicesForm{
+        width:100%;
+        margin-left: 0%;
+        display:block;
+        margin-top: 15px;
+        font-size: 20px;
+        align-items: center;
+        text-align: center;
     }
 }

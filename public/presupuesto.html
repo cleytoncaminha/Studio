@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+  
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="pres.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,10 +27,13 @@
     <main>
         <div class="cadastro"><h1>Regístrate para recibir tu presupuesto</h1></div>
         <div class="form">
-            <input id="email" type="email" placeholder="email@email.com">
-            <input id="name" type="text" placeholder="nombre">
-            <input id="service" type="text" placeholder="Servicio">
-            <button class="enviar" onclick="newContact()">Enviar</button>
+            <input id="email" type="email" placeholder="email@email.com" required>
+            <input id="name" type="text" placeholder="Nombre" required>
+            <div class="servicesForm">
+            <input id="music" class="serviceForm" name="serviceForm" type="radio" value="Music">Music
+            <input id="video" class="serviceForm" name="serviceForm" type="radio" value="Video">Video
+        </div>
+            <input type="submit" class="enviar" onclick="newContact()"></input>
            </div>
     </main>             
 
@@ -48,8 +51,14 @@
                 function newContact(){
                     let email = document.getElementById("email").value;
                     let name = document.getElementById("name").value;
-                    let service = document.getElementById("service").value;
-                
+                    
+                    if(document.getElementById("music").checked){
+                         service = "Music"
+                    }else{
+                        
+                         service = "Video"
+                    }
+                    console.log(service)
                     let contact = {email, name, service};
                     const options = {method:"POST",
                             headers: new Headers({'content-type': 'application/json'}),
